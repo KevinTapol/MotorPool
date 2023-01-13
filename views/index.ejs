@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homepage</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>MotorPool Work Orders</h1>
+        <!-- <h5>Next task don't allow duplicate work orders by bumper number and work order number</h5> -->
+        <form action="/new" method="POST">
+            <div>
+                <label for="vehicleBumperNumber">Vehicle Bumper Number</label> <!-- for field using name field of input -->
+                <input type="text" placeholder="Example HQ40" name="vehicleBumperNumber"> <!-- name= field is what gets passed to server -->
+            </div>
+            <div>  
+                <label for="numinput">Work Order Number</label>
+                <input type="number" name="numinput" value="0">
+            </div>
+            <div>
+                <label for="mechanic">Name of Mechanic</label>
+                <input type="text" placeholder="Example Johnny on the Spot" name="mechanic">
+            </div> 
+            <button type="submit">Create Work Order</button>
+        </form>
+        <ol>
+            <!-- ul gives bullets ol gives numbered list -->
+            <!--  EJS  --> 
+            <!--  The = outputs the contents as strings escaped - outputs raw HTML, and  is for logic (no output) -->
+            <% itemList.forEach(item => { %> <!-- Opening ejs forEach item iteration-->
+                <li>
+                    <span>Work Order Number: <span><%= item.vehicleBumperNumber + "-" + item.numinput  %></span></span>
+                    <div>Created By Mechanic: <span><%= item.mechanic %></span></div>
+                    <div>For Vehicle Bumper Number : <span><%= item.vehicleBumperNumber %></span></div>
+                    <div class="editRemoveLinks">
+                        <a href="/edit/<%= item._id %>">Edit</a>
+                        <a href="/edit/remove/<%= item._id %>">Delete Work Order</a>
+                    </div>
+                </li>
+            <% }) %> <!--  Closing ejs forEach item iteration  -->
+        </ol>
+    </div>
+</body>
+</html>

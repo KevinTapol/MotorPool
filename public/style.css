@@ -1,0 +1,88 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+
+body {
+    /* font-size: 36px; */
+    font-family: sans-serif;
+    display: flex;
+    justify-content: center;
+    background-color: steelblue;
+}
+
+.container {
+    /* text-align: center; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: white;
+    padding: 5px;
+    border: 1px solid black;
+    border-radius: 10px;
+}
+
+h1,
+h5 {
+    margin: 0 auto;
+
+}
+
+form {
+    margin: 5px auto;
+}
+form div {
+    margin: 1rem auto;
+}
+
+.editCancel {
+    text-align: center;
+}
+
+input {
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+input,
+label {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    /* font-size: 36px; */
+    /* margin-bottom: 10px; */
+}
+
+ol {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    margin-top: 1rem;
+}
+
+button,
+a {
+    text-decoration: none;
+    background-color: blue;
+    color: white;
+    border-radius: 0.5rem;
+    border: 1px solid black;
+    padding: 0.5rem;
+    margin: 2px;
+}
+
+.editRemoveLinks {
+    margin-top: 1rem;
+}
+
+li {
+    margin-bottom: 1rem;
+    /* justify-content: center; */
+    /* display: block;
+    margin: 0 auto; */
+    /* margin-bottom: 5px; */
+}
