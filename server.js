@@ -22,7 +22,7 @@ app.set("view engine", "ejs"); // front end views
 app.use(express.static('public')) // allows static (don't change) files into a folder called public 
 // app.use(flash()) // set up flash error
 // app.use(session({ // set up sessions for storing flash error messages
-//     secret: 'mongodb+srv://kevint:!Qwerty2@cluster0.ik4ax.mongodb.net/Motorpool?retryWrites=true&w=majority',
+//     secret: process.evn.DB_STRING,
 //     resave: false,
 //     saveUninitialized: false,
 //     store: new MongoStore({
