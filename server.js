@@ -3,6 +3,9 @@ const express = require("express");
 const app = express();
 const PORT = 5000;
 const mongoose = require("mongoose"); // mongodb middleware
+// const flash = require('connect-flash') // error messages npm install connect-flash
+// const session = require('express-session') // enable sessions for error messages npm install express-session
+// const MongoStore = require('connect-flash')(session)
 
 //*Import functions/routes
 const connectDB = require("./config/database")
@@ -17,6 +20,15 @@ connectDB() // call function in the file database.js
 //todo - Set Middleware
 app.set("view engine", "ejs"); // front end views
 app.use(express.static('public')) // allows static (don't change) files into a folder called public 
+// app.use(flash()) // set up flash error
+// app.use(session({ // set up sessions for storing flash error messages
+//     secret: 'mongodb+srv://kevint:!Qwerty2@cluster0.ik4ax.mongodb.net/Motorpool?retryWrites=true&w=majority',
+//     resave: false,
+//     saveUninitialized: false,
+//     store: new MongoStore({
+//         url: 'mongodb://localhost/Motorpool'
+//     })
+// }))
 
 //*Required to properly parse form POST requests - sending data
 app.use(express.urlencoded({ extended: true })); // parse requests from forms (user url inputs from forms)
