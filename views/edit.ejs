@@ -11,7 +11,7 @@
     <div class="container">
         <h2>
             <span>
-                <% itemList.forEach(item => { %> <!-- Opening ejs forEach item iteration-->
+                <% ItemList.forEach(item => { %> <!-- Opening ejs forEach item iteration-->
                     <% if (item._id==idItem) { %>
                     <div>
                         <span>Work Order Number: <span><%= item.vehicleBumperNumber + "-" + item.numinput  %></span></span>   
@@ -22,7 +22,7 @@
         </h2>
         <section>
             <ol>
-                <% itemList.forEach(item => { %>
+                <% ItemList.forEach(item => { %>
                     <% if (item._id==idItem) { %>
                         <div>
                             <form action="/edit/update/<%= item._id %>" method="POST">

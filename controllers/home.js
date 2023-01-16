@@ -7,7 +7,7 @@ module.exports = {
         try {
             const items = await
             ItemList.find() // in the model find the collection items
-            res.render("index.ejs", { itemList: items }); // render page index.ejs send data as a list of key value pair items
+            res.render("index.ejs", { ItemList: items }); // render page index.ejs send data as a list of key value pair items
         } catch (err) {
             if (err) return res.status(500).send(err); // exact internal error and location logged out to browser not sure why if (err) is needed but it is
         }

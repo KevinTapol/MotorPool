@@ -31,7 +31,7 @@
             <!-- ul gives bullets ol gives numbered list -->
             <!--  EJS  --> 
             <!--  The = outputs the contents as strings escaped - outputs raw HTML, and  is for logic (no output) -->
-            <% itemList.forEach(item => { %> <!-- Opening ejs forEach item iteration-->
+            <% ItemList.forEach(item => { %> <!-- Opening ejs forEach item iteration-->
                 <li>
                     <span>Work Order Number: <span><%= item.vehicleBumperNumber + "-" + item.numinput  %></span></span>
                     <div>Created By Mechanic: <span><%= item.mechanic %></span></div>
