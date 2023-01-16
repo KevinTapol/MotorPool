@@ -12,6 +12,10 @@ mechanic: {
     type: String, // Mechanic Name
     required: true // require the field
 },
+partnumber: {
+    type: String, // Mechanic Name
+    required: false // don't require
+},
 date: {
     type: Date, // setting the only type that can be written is a date
     default: Date.now // grab default value of date and set ot field date

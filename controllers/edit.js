@@ -5,8 +5,8 @@ module.exports = {
         //console.log(req)
         const id = req.params.id;
         console.log(id)
-        ItemList.find({}, (err, workorders) => {
-             res.render("edit.ejs", { ItemList: workorders, idItem: id });
+        ItemList.find({}, (err, items) => {
+             res.render("edit.ejs", { ItemList: items, idItem: id });
         });
      },
     deleteTask: (req, res) => {
