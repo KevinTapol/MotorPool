@@ -1,6 +1,6 @@
 // logic related to home page
 // don't allow duplicates to be created
-const ItemList = require('../models/ItemList') // require model schema
+const ItemList = require('../models/ItemList.js') // require model schema
 
 module.exports = {
     getIndex : async (req, res) => {
