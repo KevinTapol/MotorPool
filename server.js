@@ -8,9 +8,9 @@ const mongoose = require("mongoose"); // mongodb middleware
 // const MongoStore = require('connect-flash')(session)
 
 //*Import functions/routes
-const connectDB = require("./config/database")
-const homeRoutes = require("./routes/home") // direct traffic to routes folder home.js
-const editRoutes = require("./routes/edit")
+const connectDB = require("./config/database.js")
+const homeRoutes = require("./routes/home.js") // direct traffic to routes folder home.js
+const editRoutes = require("./routes/edit.js")
 
 require('dotenv').config({path: './config/.env'}) // require environment variables in the file path
 
