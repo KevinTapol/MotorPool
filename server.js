@@ -1,7 +1,7 @@
 //todo - Declare Variables
 const express = require("express");
 const app = express();
-const PORT = process.env.PORT || 5000;
+// const PORT = process.env.PORT || 5000;
 const mongoose = require("mongoose"); // mongodb middleware
 // const flash = require('connect-flash') // error messages npm install connect-flash
 // const session = require('express-session') // enable sessions for error messages npm install express-session
@@ -38,4 +38,4 @@ app.use('/', homeRoutes) // if user goes to / for home route call declared varia
 app.use('/edit', editRoutes)
 
 //todo - Start Server
-app.listen(PORT, () => console.log(`Server running on port ${PORT}`)); // listen for changes ex user n stuff on port
+app.listen(process.env.PORT, () => console.log(`Server running on port ${PORT}`)); // listen for changes ex user n stuff on port
