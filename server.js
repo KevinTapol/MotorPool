@@ -1,7 +1,7 @@
 //todo - Declare Variables
 const express = require("express");
 const app = express();
-const PORT = 5000;
+const PORT = process.env.PORT || 5000;
 const mongoose = require("mongoose"); // mongodb middleware
 // const flash = require('connect-flash') // error messages npm install connect-flash
 // const session = require('express-session') // enable sessions for error messages npm install express-session
