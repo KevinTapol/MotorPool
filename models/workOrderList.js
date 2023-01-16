@@ -1,5 +1,5 @@
 const mongoose = require('mongoose'); // require same idea as import
-const workOrderSchema = new mongoose.Schema({
+const workOrderListSchema = new mongoose.Schema({
 vehicleBumperNumber: {
     type: String, // setting the only type you can write is a string
     required: true // ensure integrity of data demanding no blank fields
@@ -21,4 +21,4 @@ date: {
     default: Date.now // grab default value of date and set ot field date
 }
 })
-module.exports = mongoose.model('workOrder',workOrderSchema,'workOrders'); // export model to specific schema, details of schema, collections
+module.exports = mongoose.model('workOrderList', workOrderListSchema,'workOrders'); // export model to specific schema, details of schema, collections

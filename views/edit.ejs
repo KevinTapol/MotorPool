@@ -11,7 +11,7 @@
     <div class="container">
         <h2>
             <span>
-                <% ItemList.forEach(item => { %> <!-- Opening ejs forEach item iteration-->
+                <% workOrderList.forEach(item => { %> <!-- Opening ejs forEach item iteration-->
                     <% if (item._id==idItem) { %>
                     <div>
                         <span>Work Order Number: <span><%= item.vehicleBumperNumber + "-" + item.numinput  %></span></span>   
@@ -22,7 +22,7 @@
         </h2>
         <section>
             <ol>
-                <% ItemList.forEach(item => { %>
+                <% workOrderList.forEach(item => { %>
                     <% if (item._id==idItem) { %>
                         <div>
                             <form action="/edit/update/<%= item._id %>" method="POST">
@@ -46,21 +46,8 @@
                                 <!-- create more input fields for part number and fault -->
                             </form>
                         </div>
-                        <% } else { %>
-                            <!-- I'm commenting this out as to only edit 1 Work Order at a time -->
-                            <!-- <li>
-                                <span>Work Order Number: <span><%= item.vehicleBumperNumber + "-" + item.numinput  %></span></span>
-                                <div>
-                                    <%= item.vehicleBumperNumber %>
-                                </div>
-                                <div>
-                                    <%= item.mechanic %>
-                                </div>
-                                <a href="/edit/<%= item._id %>">Edit</a>
-                                <a href="/" class="cancel">Cancel</a>
-                            </li> -->
-                            <% } %>
-                                <% }) %>
+                    <% } %> <!--Closing if ejs-->
+                <% }) %> <!--Closing forEach ejs-->
             </ol>
         </section>
     </div>
