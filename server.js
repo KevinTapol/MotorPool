@@ -38,4 +38,6 @@ app.use('/', homeRoutes) // if user goes to / for home route call declared varia
 app.use('/edit', editRoutes)
 
 //todo - Start Server
-app.listen(process.env.PORT, () => console.log(`Server running on port ${process.env.PORT}`)); // listen for changes ex user n stuff on port
+app.listen(process.env.PORT, () => {
+    console.log(`Server is running on localhost:${process.env.PORT}`);
+  }); // listen for changes ex user n stuff on port
