@@ -26,6 +26,19 @@ body {
     margin-top: 1rem;
 }
 
+.footer {
+    text-align: center;
+    margin: 1rem auto;
+    margin-top: 3rem;
+}
+.footer .copyright {
+    margin: 1rem auto;
+
+}
+#links a{
+    padding-top: 1.3rem;
+}
+
 h1,
 h5 {
     margin: 0 auto;
