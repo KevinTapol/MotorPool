@@ -89,6 +89,11 @@ a {
     margin: 2px;
 }
 
+a:hover,
+button:hover {
+    background-color: steelblue;
+}
+
 .editRemoveLinks {
     margin-top: 1rem;
 }
